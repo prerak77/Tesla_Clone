@@ -1,0 +1,17 @@
+.container{
+    position: relative;
+    top: 100px;
+    left: 10px;
+    width:fit-content;
+    background-color: rgb(241, 241, 241); 
+}
+body{
+    overflow-x:hidden;
+}
+
+#container1{
+    position: relative;
+    top: 100px;
+    left: 10px;
+    background-color: rgb(241, 241, 241);
+}
