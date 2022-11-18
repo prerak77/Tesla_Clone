@@ -1,0 +1,212 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Main Page</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='MAIN.CSS')}}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='Buy_2.CSS')}}">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        </head>
+
+        <body>
+
+            <!-- Navbar -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+                <div class="container-fluid">
+                    <a style="font-family : 'TESLA' ;color:black" class="navbar-brand" href="/">T E S L A</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            </nav>  
+
+            <div class = "container1">
+
+                <form method="POST">
+                    <!-- Car Name -->
+                    <div class = "top_heading">
+                        <h1 style="display:inline-block"> Your Model 3</h1>
+                        <p style = "height: 2px;"></p>
+
+                        <p style="text-align:center;color:#2e4994;font-size: 14px;font-weight: bold;" >DESIGN SAVED</p>
+                        
+                        <p style="text-align:center;" >Est. Delivery : November</p>
+                        <p style = "height: 10px;"></p>
+
+                        <p style="margin:6%">Model 3 Standard Plus Rear-Wheel Drive </p>
+                        <p style="margin:6%">Pearl White Paint</p>
+                        <p style="margin:6%">18’’ Aero Wheels</p>
+                        <p style="margin:6%">All Black Partial Premium Interior</p>
+                        <p style="margin:6%">Autopilot</p>
+                        <p style="margin:6%">30-Day Premium Connectivity Trial</p>
+                    </div>
+
+                    
+                    <!-- Price -->
+                    <div class = "buy_price">
+                        <img  style="width: 320px;top: 100px;left: 150px;position: relative;" src="{{url_for('static', filename='price.png')}}" align="middle" />
+                    </div>
+
+                    <p></p>
+                    <br><br><br><br><br>
+                        
+                    <!-- Money details -->
+                    <div class = "details">
+                        <h5 style="font-weight:bold">Enter Account Details</h5>
+                        <p></p>
+
+                        <!-- Personal Detail -->
+                        <div class = "personal_details" >
+                            <input type="radio" id="personal" name = "for" value = "Personal" style="size: 20;position: relative;left: 20px;"><label for=""style="font-size: 20;left: 35;position: relative;">Presonal</label>
+                            <p style = "height: 0;"></p>
+                            <input type="radio" id="business" name = "for"value = "Business" style="size: 20;position: relative;left: 20px;"><label for=""style="font-size: 20;left: 35;position: relative;">Business</label>
+
+                            <br>
+                            <br>
+
+                            {% if id == "same": %}
+                            <div class = "but-1">
+                                <p  style="display: inline-block;font-size:15;font-weight: bold;width: 70px;text-align: center;margin:2%;color:#695f62">ID(Unique) </p>
+                                <p  style="display: inline-block;font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#e46969">Not Unique</p>
+                                <input type="text" id = "id" name = "id" required class="btn btn-outline-secondary" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+                            {% elif id == "unique": %}
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">ID(Unique)</p>
+                                <input type="text" id = "id" name = "id" required class="btn btn-outline-secondary" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+                            {% endif %}
+            
+                            <br>
+
+                            <div class = "but-1">
+                            <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">First Name</p>
+                            <input type="text" value = '{{ det[2] }}' id = "first_name" name = "first_name" required class="btn btn-outline-secondary" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+        
+                            <br>
+
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">Last Name</p>
+                                <input type="text" value = '{{ det[3] }}' id = "last_name" name = "last_name" required class="btn btn-outline-secondary" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <br>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">Email Address</p>
+                                <input type="email" value = '{{ det[4] }}' required class="btn btn-outline-secondary" id = "email" name = "email" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <br>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Phone Number</p>
+                                <input type="text" value = '{{ det[5] }}' required class="btn btn-outline-secondary" id = "phone_number" name = "phone_number" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+                        </div>
+                        
+                        <p></p>
+                        <br>
+                        <br>
+                        <br>
+
+                        <!-- Card Details -->
+                        <div class = "car_details">
+                            <h4 style="font-weight:bold;width: 120px;text-align: left;">Card</h4>
+                            <p></p>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Name On Card </p>
+                                <input type="text" value = '{{ det[6] }}' required class="btn btn-outline-secondary" id = "card_name" name = "card_name" style = "background-color: #f4f4f4;color:black;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;font-weight: bold;">
+                            </div>
+            
+                            <br>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Card Number</p>
+                                <input type="text" value = '{{ det[7] }}' required class="btn btn-outline-secondary" id = "card_number" name = "card_number" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+            
+                            <br>
+
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 130px;text-align: center;margin:2%;color:#695f62">Expiration Date </p>
+                                <input type="date" value = '{{ det[8] }}' required class="btn btn-outline-secondary" id = "exp_date" name = "exp_date" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+            
+                            <br>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: left;margin:2%;color:#695f62">CVV </p>
+                                <input type="text" value = '{{ det[9] }}' required class="btn btn-outline-secondary" id = "cvv" name = "cvv" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+            
+                            <br>
+                        </div>
+
+                        <p></p>
+                        <br>
+                        <br>
+                        <br>
+
+                        <!-- Billing Info -->
+                        <div class = "billing_data">
+                            <h4 style="font-weight:bold;width: 290px;text-align: left;">Billing Information</h4>
+                            <p></p>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Address</p>
+                                <input type="text" value = '{{ det[10] }}' name = "address_1"  class="btn btn-outline-secondary"  style = "background-color: #f4f4f4;color:black;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;font-weight: bold;">
+                            </div>
+            
+                            <br>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 50px;text-align: center;margin:2%;color:#695f62">City </p>
+                                <input type="text" value = '{{ det[11] }}' required class="btn btn-outline-secondary" id = "city" name = "city" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+            
+                            <br>
+
+                            <div class = "but-1">
+                                <p  style="font-size:15;font-weight: bold;width: 80px;text-align: center;margin:2%;color:#695f62">Country </p>
+                                <input type="text"  value="United Arab Emirates" required class="btn btn-outline-secondary" id = "country" name = "country" style = "background-color: #f4f4f4;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+            
+                            <br>
+
+                            <div class = "buy_price">
+                                <img class = "price_image_2" style = "top: 10px;width: 320px;right: 20;position: relative;" src="{{url_for('static', filename='price2.png')}}" align="middle" />
+                                
+                            </div>
+                            
+                        </div>
+
+                        <!-- Submit -->
+                    
+                        <div class = "order">
+
+                            <input value = 'Order' type = "submit" id = "submit_button" name = "submit_button" class="btn btn-outline-secondary" style="background-color:#3E6AE1;right: 30; top:1px;position: relative;
+                            display:inline-block;border-radius: 26px; width: 250 ; text-align :center;height: 40px;color: cornsilk; margin:40;font-size: 13px;">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class = "images">
+                <img id = "first_img" src="https://static-assets.tesla.com/configurator/compositor?&options=$MT337,$PPSW,$W40B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202107150434&crop=0,0,0,0&version=v0028d202107150434" alt="">
+                
+            </div>
+
+            <!-- The loan vaues -->
+        <div class = "bottom_text">
+            <p style = "display:inline-block ; bottom: 1%;left:19%; position: fixed;"> AED 2,200 /mo before savings </p>
+            <p style = "display:inline-block ; bottom: 1%;left:37%; position: fixed">| AED 1,92 /mo after Est. savings</p>
+            <button class = "btn" style = "color:white; border-radius: 50;">^</button>
+        </div>
+
+
+        </body>
+</html>

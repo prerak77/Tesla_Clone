@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.container1{
+    right:0%;
+    height:100%;
+    width:520px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y:scroll;
+
+}
+.top_heading{
+    top: 100px;
+    width: 280px;
+    left: 170px;;
+    position: relative;
+    
+}
+.images #first_img {
+    position: fixed;
+    top: 10px;
+    right: 250px;
+    height: 700;
+    width: 1200;
+    z-index: -1;
+}
+
+
+
+.details {
+    top: 120px;
+    width: 320px;
+    left: 170px;
+    position: relative;
+}
+
+.but-1{
+    top: 20px;
+    width: 320px;
+    left: 0px;
+    position: relative;
+}
+
+.bottom_text{
+    background-color:#f4f4f4;
+    text-align:center;
+    height:90;
+    width: 600px;;
+    top:90%;
+    left:160;
+    position:fixed;
+    border-radius: 20px;
+}
+

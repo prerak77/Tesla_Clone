@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign In</title>
+        <link rel="stylesheet" href= "{{ url_for('static', filename='view.CSS')}}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      </head>
+
+      <body>
+          <!-- Navbar -->
+          <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container-fluid">
+                <a style="font-family : 'TESLA' ;color:black" class="navbar-brand" href="/">T E S L A</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          </nav> 
+          
+        <div class = "container" style = "height: fit-content;"> 
+            <br>
+            <div class = "content">
+                
+            
+                <form method="POST" id = "table" >
+
+                    <!-- User Details -->
+                    <div class = "user" style = "position:relative;left:100px">
+
+                        <h4>User Details</h4>
+                        <div class = "Fname" style="display:inline-block;width:600px">
+                            <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">First Name</p>
+                            <input type="text" value = "{{ info[1] }}" id = "first_name" name = "first_name" required class="btn btn-outline-secondary" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+                        
+                        <div class = "Lname" style="display:inline-block">
+                            <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">Last Name</p>
+                            <input type="text" value = "{{ info[2] }}" id = "last_name" name = "last_name" required class="btn btn-outline-secondary" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+
+                        <br><br>
+
+                        <div class = "email" style="display:inline-block;width:600px">
+                            <p  style="font-size:15;font-weight: bold;width: 200px;text-align: center;margin:0%;color:#695f62">Email Address</p>
+                            <input type="email" value = "{{ info[3] }}" required class="btn btn-outline-secondary" id = "email" name = "email" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+
+                        
+                        <div class = "but-1" style="display:inline-block">
+                            <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Phone Number</p>
+                            <input type="text" value = "{{ info[4] }}" required class="btn btn-outline-secondary" id = "phone_number" name = "phone_number" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+                    </div>
+
+                
+                    <br><br><br><br>
+                    <!-- Card Details -->
+                    <div class = "card_det" style = "position:relative;left:100px">
+                        <h4>Card Details</h4>
+                        <div class = "name" style="display:inline-block;width:600px">
+                            <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Name On Card </p>
+                            <input type="text" value = "{{ info[5] }}" required class="btn btn-outline-secondary" id = "card_name" name = "card_name" style = "background-color: #dbd9d9;color:black;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;font-weight: bold;">
+                        </div>
+
+                        <div class = "number" style="display:inline-block">
+                            <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Card Number</p>
+                            <input type="text" value = "{{ info[6] }}" required class="btn btn-outline-secondary" id = "card_number" name = "card_number" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+
+                        <br><br>
+
+                        <div class = "but-1" style="display:inline-block;width:600px">
+                            <p  style="font-size:15;font-weight: bold;width: 130px;text-align: center;margin:2%;color:#695f62">Expiration Date </p>
+                            <input type="date" value = "{{ info[7] }}" required class="btn btn-outline-secondary" id = "exp_date" name = "exp_date" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+
+                        <div class = "but-1" style="display:inline-block">
+                            <p  style="font-size:15;font-weight: bold;width: 120px;text-align: left;margin:2%;color:#695f62">CVV </p>
+                            <input type="text" value = "{{ info[8] }}" required class="btn btn-outline-secondary" id = "cvv" name = "cvv" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+                    </div>
+
+                    <br><br><br><br>
+                    <!-- Billing Info -->
+                    <div class = "billing" style = "position:relative;left:100px">
+
+                        <h4>Billing</h4>
+                        <div class = "address" style="display:inline-block;width:600px">
+                            <p  style="font-size:15;font-weight: bold;width: 120px;margin:1%;color:#695f62">Address</p>
+                            <input type="text" value = "{{ info[9] }}" name = "address_1"  class="btn btn-outline-secondary"  style = "background-color: #dbd9d9;color:black;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;font-weight: bold;">
+                        </div>
+
+                        <div class = "city" style="display:inline-block">
+                            <p  style="font-size:15;font-weight: bold;width: 50px;text-align: center;margin:2%;color:#695f62">City </p>
+                            <input type="text" value = "{{ info[10] }}" required class="btn btn-outline-secondary" id = "city" name = "city" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+
+                        <br><br>
+
+                        <div class = "but-1" style="display:inline-block;width:600px" >
+                            <p  style="font-size:15;font-weight: bold;width: 80px;margin:1%;color:#695f62">Country </p>
+                            <input type="text" value = "{{ info[11] }}" value="United Arab Emirates" required class="btn btn-outline-secondary" id = "country" name = "country" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                        </div>
+
+                        
+                        <div class = "submit" style="display:inline-block">
+                            <input type = "submit"  value = 'Edit'  class="btn btn-outline-secondary" id = "submit_button" name = "submit_button" style = "background-color: #3E6AE1;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:rgb(250, 250, 250);font-weight: bold;text-align: center;">
+                        </div>
+
+                    </div>
+
+                    <br><br>
+                    
+                </form>
+                
+            </div>
+        </div>
+
+
+            
+            <div class = "images" >
+                <img style = "height:600px;width:1100;left:100px;top:100px;position:relative" id = "first_img" src= "{{info[19]}}" alt="">
+            </div>
+
+
+            <div class = "container" id = "container1"> 
+                <br>
+                <div class = "content">                    
+                    
+    
+    
+                        <div class = "car" style = "position:relative;left:100px">
+    
+                            <h4>Car deatils</h4>
+                            <!-- Car Model -->
+                            <div class = "Car_model" style="display:inline-block;width:600px">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">Car Model</p>
+                                <input form = "table" value = "{{ info[12] }}"type="text"  id = "Car_model" name = "Car_model" required class="btn btn-outline-secondary" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <!-- Motor type -->
+                            <div class = "motor" style="display:inline-block">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">Motor</p>
+                                <input type="text" form = "table" value = "{{ info[13] }}" id = "motor" name = "motor" required class="btn btn-outline-secondary" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+    
+                            <br><br><br>
+                            <!-- Paint -->
+                            <div class = "paint" style="display:inline-block;width:600px">
+                                <p  style="font-size:15;font-weight: bold;width: 200px;text-align: center;margin:0%;color:#695f62">Paint</p>
+                                <input form = "table" type="text" value = "{{ info[14] }}" required class="btn btn-outline-secondary" id = "paint" name = "paint" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+    
+                            <!-- Wheel -->
+                            <div class = "Wheel" style="display:inline-block">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Wheel</p>
+                                <input form = "table" type="text" value = "{{ info[15] }}" required class="btn btn-outline-secondary" id = "Wheel" name = "Wheel" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <br><br><br>
+                            <!-- Interior -->
+                            <div class = "Interior" style="display:inline-block;width:600px">
+                                <p  style="font-size:15;font-weight: bold;width: 200px;text-align: center;margin:0%;color:#695f62">Interior</p>
+                                <input form = "table" type="text" value = "{{ info[16] }}" required class="btn btn-outline-secondary" id = "Interior" name = "Interior" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+    
+                            <!-- Autopilot -->
+                            <div class = "Autopilot" style="display:inline-block">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Autopilot</p>
+                                <input type="text" form = "table" value = "{{ info[17] }}"  required class="btn btn-outline-secondary" id = "Autopilot" name = "Autopilot" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <br><br><br>
+                            <!-- Self Driving -->
+                            <div class = "Self-Driving" style="display:inline-block;width:600px">
+                                <p  style="font-size:15;font-weight: bold;width: 200px;text-align: center;margin:0%;color:#695f62">Self-Driving</p>
+                                <input form = "table" type="text" value = "{{ info[18] }}" required class="btn btn-outline-secondary" id = "Self-Driving" name = "Self-Driving" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+                        
+
+                            <div class = "submit" style="display:inline-block">
+                                <input form = "table" type = "submit"  value = 'Edit'  class="btn btn-outline-secondary" id = "submit_button" name = "submit_button" style = "background-color: #3E6AE1;text-align: left;border-radius: 26px;width: 270px;height: 40px;border:0;color:rgb(250, 250, 250);font-weight: bold;text-align: center;">
+                            </div>
+    
+                        </div>
+    
+                        
+                </div>
+
+
+          </div>
+          
+          
+          
+
+      </body>
+</html>

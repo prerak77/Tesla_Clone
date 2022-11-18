@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign In</title>
+        <link rel="stylesheet" href= "{{ url_for('static', filename='test_drive_master.CSS')}}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      </head>
+
+      <body>
+          <!-- Navbar -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+                <div class="container-fluid">
+                    <a style="font-family : 'TESLA' ;color:black" class="navbar-brand" href="/">T E S L A</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            </nav> 
+            
+            <div class = "container" style = "height: fit-content;top: 100px;position: relative;"> 
+                <br>
+                <div class = "content">
+                    
+                
+                    <form method="POST" id = "table" >
+    
+                        <!-- User Details -->
+                        <div class = "user" style = "position:relative;left:100px">
+    
+                            <h4 style ="font-weight: bold ;font-size: 40px;">Schedule a Touchless Test Drive</h4>
+                            <p>The new default for a zero-contact experience. Learn more online to prepare for your self-guided appointment.</p>
+
+                            <div style="display:inline-block;width:200px"><p></p></div>
+
+                            <div class = "Fname" style="display:inline-block;width:200px">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">First Name</p>
+                                <input type="text"  id = "first_name" name = "first_name" required class="btn btn-outline-secondary" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 170px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+                            
+                            <div class = "Lname" style="display:inline-block">
+                                <p  style="font-size:15;font-weight: bold;width: 100px;text-align: center;margin:2%;color:#695f62">Last Name</p>
+                                <input type="text"  id = "last_name" name = "last_name" required class="btn btn-outline-secondary" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 170px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+    
+                            <br><br>
+
+                            <div style="display:inline-block;width:200px"><p></p></div>
+
+    
+                            <div class = "email" style="display:inline-block;width:600px">
+                                <p  style="font-size:15;font-weight: bold;width: 200px;margin:0%;color:#695f62">Email Address</p>
+                                <input type="email"  required class="btn btn-outline-secondary" id = "email" name = "email" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 350px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+    
+                            <br><br>
+
+                            <div style="display:inline-block;width:200px"><p></p></div>
+
+                            
+                            <div class = "but-1" style="display:inline-block">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;text-align: center;margin:2%;color:#695f62">Phone Number</p>
+                                <input type="text"  required class="btn btn-outline-secondary" id = "phone_number" name = "phone_number" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 350px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <br><br>
+
+                            <div style="display:inline-block;width:200px"><p></p></div>
+
+                            
+                            <div class = "but-1" style="display:inline-block">
+                                <p  style="font-size:15;font-weight: bold;width: 120px;margin:2%;color:#695f62">Region</p>
+                                <input type="text" value = "United Arab Emirates " required class="btn btn-outline-secondary" id = "phone_number" name = "phone_number" style = "background-color: #dbd9d9;text-align: left;border-radius: 26px;width: 350px;height: 40px;border:0;color:black;font-weight: bold;">
+                            </div>
+
+                            <br><br>
+
+                            <div style="display:inline-block;width:200px"><p></p></div>
+
+                            <input type="radio" id="personal" name = "for" value = "Personal" style="size: 20;position: relative;left: 20px;"><label for=""style="font-size: 20;left: 35px;position: relative;font-family:arial">Get Updates</label>
+
+                            <input value = 'NEXT' type = "submit" id = "submit_button" name = "submit_button" class="btn btn-outline-secondary" style="background-color:#3E6AE1;right: 30; top:40px;position: relative;
+                            display:inline-block;border-radius: 26px; width: 150px ; text-align :center;height: 40px;color: cornsilk; margin:40;font-size: 14px;margin: 10px;">
+
+                            <br><br>
+
+                            <div style="display:inline-block;width:200px"><p></p></div>
+
+                            <div style  = "width:400px;top: 30px;position: relative;display:inline-block">
+                                <p>By clicking "Next" I agree to be contacted at the number provided with more information or offers about Tesla products. I understand these calls or texts may use computer-assisted dialing or pre-recorded messages. This consent is not a condition of purchase.</p>
+                            </div>
+                        </div>
+ 
+                        <br><br>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+
+            </div>
+      </body>
+
+      <script>
+          let button = document.getElementById('submit_button')
+          button.addEventListener("click",()=>{
+            alert("Your request is registered\n you will be contacted shortly")
+        })
+      </script>
+</html>

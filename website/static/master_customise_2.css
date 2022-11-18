@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.container1{
+    right:0%;
+    height:100%;
+    width:500px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y:scroll;
+}
+.top_heading{
+    top: 100px;
+    width: 200px;
+    left: 170px;;
+    position: relative;
+    
+}
+
+.det1{
+    font-weight: bold;
+    font-size: 25px;
+    width: 300px;
+    top: 120px;
+    left: 110px;
+    position: relative;
+}
+.det2{
+    font-size: 13px;
+    top:110px;
+    left: 105px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+} 
+
+
+.options{
+    top: 120px;
+    left: 110px;
+    position: relative;
+    width: 350px;
+    
+
+} 
+ .images #first_img {
+    position: fixed;
+    top: 10px;
+    right: 250px;
+    height: 700;
+    width: 1200;
+    z-index: -1;
+}
+
+.Paint{
+    width: 300px;
+    top: 400px;
+    left: 110px;
+    position: relative;
+    height: 300px;
+    text-align: center;
+}
+
+.gradient-button {
+    margin: 10px;
+    padding: 15px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    width: 35px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 300px;
+    border : 0
+}
+
+.gradient-button-1 {background-image: linear-gradient(to right, #f3efef 0%, #f2f1f0 51%, #c5c2c2 100%);}
+.gradient-button-1:hover { background-position: right center; }
+
+.gradient-button-2 {background-image: linear-gradient(to right, #000000 0%, #777574 51%, #acacac 100%)}
+.gradient-button-2:hover { background-position: right center; }
+
+.gradient-button-3 {background-image: linear-gradient(to right, #807e7e 0%, #bbbab9 51%, #575455 100%)}
+.gradient-button-3:hover { background-position: right center; }
+
+.gradient-button-4 {background-image: linear-gradient(to right, #3a49cf 0%, #9d97f7 51%, #cfd7ee 100%)}
+.gradient-button-4:hover { background-position: right center; }
+
+.gradient-button-5 {background-image: linear-gradient(to right, #f52525 0%, #f38383 51%, #ff9393 100%)}
+.gradient-button-5:hover { background-position: right center; }
+
+.gradient-button-6 {background-image: linear-gradient(to right, #000000 0%, #2c2929 51%, #000000 100%)}
+.gradient-button-6:hover { background-position: right center; }
+
+.gradient-button-7 {background-image: linear-gradient(to right, #ece8e8 0%, #d3d3d3 51%, #c4c4c4 100%)}
+.gradient-button-7:hover { background-position: right center; }
+
+.gradient-button-8 {background-image: linear-gradient(to right, #f7c317 0%, #f3ec83 51%, #fada70 100%)}
+.gradient-button-8:hover { background-position: right center; }
+
+
+.bottom_text{
+    background-color:#f4f4f4;
+    text-align:center;
+    height:90;
+    width: 600px;;
+    top:90%;
+    left:160;
+    position:fixed;
+    border-radius: 20px;
+}
+
+.img_changer_1{
+    width: 30px;
+    height:30px;
+    background-color: rgb(240, 243, 243);
+    border-radius: 25px;
+    border:0px ;
+    top:50%;
+    left: 780px;
+    position:fixed;
+}
+
+.img_changer_2{
+    width: 30px;
+    height:30px;
+    background-color: rgb(240, 243, 243);
+    border-radius: 25px;
+    border:0px ;
+    top:50%;
+    left: 40px;
+    position:fixed;
+    
+}
+
+#img_1{
+    width: 30px;
+    height: 30px;
+    top:50%;
+    left: 780px;
+    position:fixed;
+
+}
+
+#img_2{
+    width: 30px;
+    height: 30px;
+    top:50%;
+    left: 40px;
+    position:fixed;
+}
+
+.wheels { 
+    width: 400px;
+    top: 550px;
+    left: 80px;
+    position: relative;
+    height: 300px;
+    text-align: center; 
+}
+
+
+#wh_1{
+    width: 85px;
+    height:85px;
+    border:0
+}
+#wh_2{
+    width: 85px;
+    height:85px;
+}
+
+.interior { 
+    width: 400px;
+    top: 750px;
+    left: 80px;
+    position: relative;
+    height: 300px;
+    text-align: center; 
+}
+
+.Autopilot{
+    width: 450px;
+    top: 850px;
+    left: 60px;
+    position: relative;
+    height: 300px;
+    text-align: center;
+}
+
+.more_autopilot{
+    width: 400px;
+    top: 1150px;
+    left: 60px;
+    position: relative;
+    height: 300px;
+    text-align: center;
+}
+
+.order{
+    width: 400px;
+    height: 450px;
+    top: 1750px;
+    left: 60px;
+    position: relative;
+    text-align: center;
+    
+
+}
